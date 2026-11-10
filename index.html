@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Berlangganan UTS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Aplikasi Berlangganan Video Streaming</h2>
+        <p class="subtitle">* * * UJIAN TENGAH SEMESTER 20261 * * *</p>
+        <hr>
+        
+        <div class="form-group">
+            <label>Nama Anda:</label>
+            <input type="text" id="nama" placeholder="Masukkan nama..." required>
+        </div>
+        
+        <div class="form-group">
+            <label>Pilih Paket:</label>
+            <select id="paket">
+                <option value="1">1. Basic</option>
+                <option value="2">2. Premium</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Durasi Berlangganan (Bulan):</label>
+            <input type="number" id="durasi" min="1" max="12" value="1">
+        </div>
+        
+        <div class="form-group">
+            <label>Jumlah Video:</label>
+            <input type="number" id="jumlahvideo" min="1" value="1">
+        </div>
+        
+        <button onclick="hitungBiaya()">Hitung Total Berlangganan</button>
+        
+        <!-- Wadah untuk menampilkan hasil dari Python -->
+        <div id="hasil" class="hasil-container" style="display: none;">
+            <h3>=== Detail Berlangganan ===</h3>
+            <p id="res-nama"></p>
+            <p id="res-paket"></p>
+            <p id="res-durasi"></p>
+            <p id="res-biayapaket"></p>
+            <p id="res-biayavideo"></p>
+            <p id="res-diskon"></p>
+            <h3 id="res-total" class="total-text"></h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
