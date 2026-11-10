@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/api/hitung', methods=['POST'])
+@app.route('/api/index', methods=['POST'])
 def hitung():
     # Mengambil data JSON dari frontend (script.js)
     data = request.json
@@ -46,5 +46,3 @@ def hitung():
     })
 
 # Wajib ada agar Vercel bisa mengeksekusi Flask
-def handler(event, context):
-    return app(event, context)
